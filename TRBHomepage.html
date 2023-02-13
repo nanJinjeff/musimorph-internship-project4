@@ -1,0 +1,52 @@
+<html>
+<head>
+   <title>Searching TRB listings</title>
+   <link type="text/css" rel="stylesheet" href="TRBHomepage.css">
+</head>
+<body>
+   <div style="top: 20%;left:37.5%;position:absolute">  
+      <img class="imglogo" src="logo design blocks.webp" style="width:390px;height:250px">
+   </div>
+   <div style="top:50%;left:30%;position:absolute">
+      <table class="input-window">
+         <tr>
+            <td>
+               <input id="inputtext" class="input-text" type="text" name="searchingTRB" value="Level/Tech Type, the searched history will be shown below"></input>
+            </td>
+            <td>
+               <input id="button" class="search-button" type="button" name="Search" value="Search">
+            </td>
+         </tr>
+      </table>
+   </div>
+   <div style="top:60%;left:30%;position:absolute;overflow-y: auto;overflow-x:hidden;width:600px">
+      <table id="newtable">
+      </table>
+   </div>
+   <script>
+      
+      let button1 = document.getElementById("button");
+      button1.addEventListener("mousedown",()=>{
+         button1.style.background="aquamarine";
+      })
+      button1.addEventListener("mouseup",()=>{
+         button1.style.background="white";
+      })
+      button1.addEventListener('click', ()=>{
+         
+         let newInput = document.getElementById("inputtext").value;
+         const inner = `
+                  <td style="text-align: center;width:600px">${newInput}</td>
+         `;
+
+        const newTable = document.getElementById("newtable");
+        let newtr= document.createElement("tr");
+        newtr.className = "historylist";
+        newtr.innerHTML=inner;
+        newTable.append(newtr);
+      })
+   </script>
+</body>
+<footer>
+</footer>
+</html>

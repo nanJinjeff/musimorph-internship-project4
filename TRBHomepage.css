@@ -1,0 +1,38 @@
+body {
+    background-image: linear-gradient(to right,red,rgb(247, 255, 0),rgb(255, 196, 2),white,white,white,rgb(0, 255, 0),rgb(126, 126, 255),rgb(0, 0, 255));
+}
+.search-button{
+    height: 20px;
+    width:100px;
+    transition: height 1s, width 1s;
+}
+.search-button:hover{
+    background-color: aquamarine;
+}
+.input-text{
+    height:20px;
+    width:500px;
+}
+.input-window{
+    height:21px;
+    width:601px;
+    transition: transform 1s;
+}
+.input-window:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+}
+.historylist{
+    transition: transform 1s;
+}
+.historylist:hover{
+    background-color: aquamarine;
+    transform:scale(1.1);
+}
+.imglogo{
+    transition: transform 2s;
+}
+.imglogo:hover{
+    transform: rotateX(360deg);
+    transform: rotateY(360deg);
+}
